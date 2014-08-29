@@ -1,0 +1,42 @@
+[root@a1-dba-tech01 /usr/local/dbadmin/monitor]
+#crontab -l 
+30 * * * * sh /usr/local/dbadmin/monitor/slow_query_upload.sh  > /tmp/slowquery.log 2>&1
+* * * * * sh  /usr/local/dbadmin/monitor/myawr21_3309.sh  > /tmp/myawr21_3309.log 2>&1
+
+[root@a1-dba-tech01 /usr/local/dbadmin/monitor]
+#cat /usr/local/dbadmin/monitor/myawr21_3309.sh 
+#!/bin/sh
+#****************************************************************#
+# ScriptName: myawr.sh
+# Create Date: 2014-08-19 17:23
+# Modify Date: 2014-08-19 17:23
+#***************************************************************#
+/usr/bin/perl /usr/local/dbadmin/monitor/mysqlawr.pl -u dbread -p db34379ad8TTd2332adsfread -lh 10.128.6.21 -P 3309  -tu dbmon -tp dbmon -TP 3310 -th 10.128.6.21 -n bond0 -d sdb -I 1
+
+[root@a1-dba-tech01 /usr/local/dbadmin/monitor]
+#cat /usr/local/dbadmin/monitor/slow_query_upload.sh
+#!/bin/bash
+#****************************************************************#
+# ScriptName: slowquery.sh
+# Create Date: 2014-05-22 13:48
+# Modify Date: 2014-05-22 13:48
+#***************************************************************#
+for i in `ls -ltr /etc/my33*cnf | awk -F/etc {'print $2'} | awk -F"/my" {'print $2'} | awk -F".cnf" {'print $1'}`;
+do 
+dir=/storage/sas/mysql$i/slow/
+host=`cat  /etc/sysconfig/network-scripts/ifcfg-bond0  |grep "IPADDR"|awk -F"=" '{print $2}'`
+hostid=`/usr/bin/mysql  --login-path=mlogin    -e "select id from dbinfo.hosts where ip='$host'"|sed -n -e '2p'`
+slowquery_file=`/usr/bin/mysql --login-path=mylogin -P $i -h $host  -e "show variables like 'slow_query_log_file'"|grep log|awk '{print $2}'`
+##### set a new slow query log ###########
+tmp_log=`/usr/bin/mysql --login-path=mylogin -P $i  -h $host -e "select concat('$dir','slowquery_',date_format(now(),'%Y%m%d%H'),'.log');"|grep log|sed -n -e '2p'`
+
+#collect mysql slowquery log into mtop database
+pt-query-digest --user=dbadmin -P 3310 --password=xxxxxxxx --review h=10.128.6.228,D=slow_query_log,t=global_query_review --history h=10.128.6.228,D=slow_query_log,t=global_query_review_history --no-report  --limit=100%  --filter="\$event->{add_column} = length(\$event->{arg}) and \$event->{dbport}=$i and \$event->{hostid}=$hostid  and \$event->{Bytes} = length(\$event->{arg}) and \$event->{hostname}=\"$HOSTNAME\""   $slowquery_file
+
+#config mysql slowquery
+/usr/bin/mysql --login-path=mylogin -P $i -h $host -e  "set global slow_query_log=1;set global long_query_time=1;set global slow_query_log_file = '$tmp_log';"
+
+#delete log before 30 days
+cd $dir
+/usr/bin/find ./ -name 'slowquery_*' -mtime +30|xargs rm -rf ;
+done;
