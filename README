@@ -1,3 +1,21 @@
+Welcome to the myawr_v2 wiki!
+
+myawr_v2 was modified by louis liu base on myawr
+
+myawr was mysql awr report referenced by oracle AWR and was wrote by perl language. myawr need slow_log and Percona tools .
+
+myawr_v2 add :
+
+1 os information module.
+
+2 multi instance support (extend table by db_port)
+
+3 modified some bugs (mistake value)
+
+4 add different statistics views
+
+
+
 Myawr is a tool for collecting and analyzing performance data for MySQL database (including os info ,mysql status info and Slow Query Log  all of details). 
 The idea comes from Oracle awr. Myawr periodic collect data and save to the database as snapshots.
 Myawr was designed as CS architecture.Myawr depends on (but not necessary) performance schema of MySQL database.
@@ -10,13 +28,115 @@ myawrsrpt.pl-----a perl script for analyzing mysql peak time data
 Myawr relies on the Percona Toolkit to do the slow query log collection.
 Specifically you can run pt-query-digest. To parse your slow logs and insert them into your server database for reporting and analyzing. 
 
-Thanks to orzdba.pl (zhuxu@taobao.com).
+eg:
+
+[root@a1-dba-tech01 /usr/local/dbadmin/monitor]
+#./mysqlawrrpt1.pl  -u dbmon -p dbmon -lh 10.128.6.21 -P 3310   -I 1 -T 3309
+===================================================
+|       Welcome to use the myawrrpt tool !   
+|             Date: 2014-08-29
+|
+|      Hostname is: a1-dba-tech01.hz 
+|       Ip addr is: 10.128.6.21 
+|          Port is: 3309 
+|       Db role is: master 
+|Server version is: 5.6.17
+|        Uptime is: 0y 2m 21d 20h 5mi 6s
+|
+|   Min snap_id is: 1 
+| Min snap_time is: 2014-08-18 17:59:46 
+|   Max snap_id is: 14003 
+| Max snap_time is: 2014-08-29 10:53:02 
+| snap interval is: 60s
+===================================================
+
+Listing the last 2 days Snapshots
+---------------------------------
+snap_id:   11170      snap_time : 2014-08-27 11:40:02 
+snap_id:   11218      snap_time : 2014-08-27 12:28:02 
+snap_id:   11266      snap_time : 2014-08-27 13:16:02 
+snap_id:   11314      snap_time : 2014-08-27 14:04:02 
+snap_id:   11362      snap_time : 2014-08-27 14:52:02 
+snap_id:   11410      snap_time : 2014-08-27 15:40:02 
+snap_id:   11458      snap_time : 2014-08-27 16:28:02 
+snap_id:   11506      snap_time : 2014-08-27 17:16:02 
+snap_id:   11554      snap_time : 2014-08-27 18:04:02 
+snap_id:   11602      snap_time : 2014-08-27 18:52:02 
+snap_id:   11650      snap_time : 2014-08-27 19:40:02 
+snap_id:   11698      snap_time : 2014-08-27 20:28:03 
+snap_id:   11746      snap_time : 2014-08-27 21:16:02 
+snap_id:   11794      snap_time : 2014-08-27 22:04:02 
+snap_id:   11842      snap_time : 2014-08-27 22:52:02 
+snap_id:   11890      snap_time : 2014-08-27 23:40:02 
+snap_id:   11938      snap_time : 2014-08-28 00:28:02 
+snap_id:   11986      snap_time : 2014-08-28 01:16:02 
+snap_id:   12034      snap_time : 2014-08-28 02:04:02 
+snap_id:   12082      snap_time : 2014-08-28 02:52:02 
+snap_id:   12130      snap_time : 2014-08-28 03:40:03 
+snap_id:   12178      snap_time : 2014-08-28 04:28:02 
+snap_id:   12226      snap_time : 2014-08-28 05:16:02 
+snap_id:   12274      snap_time : 2014-08-28 06:04:02 
+snap_id:   12322      snap_time : 2014-08-28 06:52:02 
+snap_id:   12370      snap_time : 2014-08-28 07:40:02 
+snap_id:   12418      snap_time : 2014-08-28 08:28:02 
+snap_id:   12466      snap_time : 2014-08-28 09:16:02 
+snap_id:   12514      snap_time : 2014-08-28 10:04:02 
+snap_id:   12562      snap_time : 2014-08-28 10:52:02 
+snap_id:   12610      snap_time : 2014-08-28 11:40:03 
+snap_id:   12658      snap_time : 2014-08-28 12:28:02 
+snap_id:   12706      snap_time : 2014-08-28 13:16:02 
+snap_id:   12754      snap_time : 2014-08-28 14:04:02 
+snap_id:   12802      snap_time : 2014-08-28 14:52:02 
+snap_id:   12850      snap_time : 2014-08-28 15:40:02 
+snap_id:   12898      snap_time : 2014-08-28 16:28:02 
+snap_id:   12946      snap_time : 2014-08-28 17:16:03 
+snap_id:   12994      snap_time : 2014-08-28 18:04:02 
+snap_id:   13042      snap_time : 2014-08-28 18:52:03 
+snap_id:   13090      snap_time : 2014-08-28 19:40:02 
+snap_id:   13138      snap_time : 2014-08-28 20:28:02 
+snap_id:   13186      snap_time : 2014-08-28 21:16:03 
+snap_id:   13234      snap_time : 2014-08-28 22:04:02 
+snap_id:   13282      snap_time : 2014-08-28 22:52:02 
+snap_id:   13330      snap_time : 2014-08-28 23:40:02 
+snap_id:   13378      snap_time : 2014-08-29 00:28:03 
+snap_id:   13426      snap_time : 2014-08-29 01:16:02 
+snap_id:   13474      snap_time : 2014-08-29 02:04:02 
+snap_id:   13522      snap_time : 2014-08-29 02:52:03 
+snap_id:   13570      snap_time : 2014-08-29 03:40:02 
+snap_id:   13618      snap_time : 2014-08-29 04:28:03 
+snap_id:   13666      snap_time : 2014-08-29 05:16:03 
+snap_id:   13714      snap_time : 2014-08-29 06:04:02 
+snap_id:   13762      snap_time : 2014-08-29 06:52:02 
+snap_id:   13810      snap_time : 2014-08-29 07:40:02 
+snap_id:   13858      snap_time : 2014-08-29 08:28:02 
+snap_id:   13906      snap_time : 2014-08-29 09:16:02 
+snap_id:   13954      snap_time : 2014-08-29 10:04:02 
+snap_id:   14002      snap_time : 2014-08-29 10:52:02 
+snap_id:   14003      snap_time : 2014-08-29 10:53:02 
+
+Pls select Start and End Snapshot Id
+------------------------------------
+Enter value for start_snap:13570               
+Start Snapshot Id Is:13570
+
+Enter value for end_snap:14003
+End  Snapshot Id Is:14003
+
+Set the Report Name
+-------------------
+
+Enter value for report_name:myawrv2_02.html
+
+Using the report name :myawrv2_02.html
+
+Generating the mysql report for this analysis ...
+Generate the mysql report Successfully.
 
 
 
 Welcome to the myawr_v2 wiki!
 
-myawr_v2 was wrote by noodba and modified by louis liu
+myawr_v2 was modified by louis liu base on myawr
 
 myawr was mysql awr report referenced by oracle AWR and was wrote by perl language. myawr need slow_log and Percona tools .
 
@@ -28,7 +148,7 @@ myawr_v2 add :
 
 3 modified some bugs (mistake value)
 
-4 add difference statistics views
+4 add different statistics views
 
 
 
