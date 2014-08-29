@@ -1,0 +1,34 @@
+Myawr is a tool for collecting and analyzing performance data for MySQL database (including os info ,mysql status info and Slow Query Log  all of details). 
+The idea comes from Oracle awr. Myawr periodic collect data and save to the database as snapshots.
+Myawr was designed as CS architecture.Myawr depends on (but not necessary) performance schema of MySQL database.
+
+Myawr consists of three parts:
+myawr.pl--------a perl script for collecting mysql performance data
+myawrrpt.pl-----a perl script for analyzing mysql performance data
+myawrsrpt.pl-----a perl script for analyzing mysql peak time data
+
+Myawr relies on the Percona Toolkit to do the slow query log collection.
+Specifically you can run pt-query-digest. To parse your slow logs and insert them into your server database for reporting and analyzing. 
+
+Thanks to orzdba.pl (zhuxu@taobao.com).
+
+
+
+Welcome to the myawr_v2 wiki!
+
+myawr_v2 was wrote by noodba and modified by louis liu
+
+myawr was mysql awr report referenced by oracle AWR and was wrote by perl language. myawr need slow_log and Percona tools .
+
+myawr_v2 add :
+
+1 os information module.
+
+2 multi instance support (extend table by db_port)
+
+3 modified some bugs (mistake value)
+
+4 add difference statistics views
+
+
+
