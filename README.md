@@ -4,7 +4,7 @@ history of myawr
 
 Present:
 
-myawr_v3  #################################
+------------------myawr_v3--------------------------------------------------------------------------------
 
 base on myawr_v2
 
@@ -24,7 +24,7 @@ before install myawr_v3 you need run sys_schema to create formatted views for da
 
 2014/08:
 
-myawr_v2  #################################
+----------------- myawr_v2----------------------------------------------------------------------------------
 
 myawr_v2 was modified by louis liu base on myawr
 
@@ -71,13 +71,7 @@ Then you can run crontab job to collect data as you want
 
 * * * * * sh  /usr/local/dbadmin/monitor/myawr21_3309.sh  > /tmp/myawr21_3309.log 2>&1
 
-#cat /usr/local/dbadmin/monitor/myawr21_3309.sh 
-#!/bin/sh
-#****************************************************************#
-# ScriptName: myawr.sh
-# Create Date: 2014-08-19 17:23
-# Modify Date: 2014-08-19 17:23
-#***************************************************************#
+
 /usr/bin/perl /usr/local/dbadmin/monitor/mysqlawr.pl -u dbadmin  -p xxxxx  -lh 10.128.6.21 -P 3309  -tu dbmon -tp dbmon -TP 3310 -th 10.128.6.21 -n bond0 -d sdb -I 1
 
 After collecting data  you can run myawrrpt1 scripts to format date and display them on the website.
