@@ -61,7 +61,10 @@ id should be unique identify to every instance ( for multi instance you should a
 Then you can run crontab job to collect data as you want
 
 # * * * * sh /usr/local/dbadmin/monitor/myawr21_3309.sh > /tmp/myawr21_3309.log 2>&1
+
+------------------------------------------------------------------------------------------------
 /usr/bin/perl /usr/local/dbadmin/monitor/mysqlawr.pl -u dbadmin -p xxxxx -lh 10.128.6.21 -P 3309 -tu dbmon -tp dbmon -TP 3310 -th 10.128.6.21 -n bond0 -d sdb -I 1
+------------------------------------------------------------------------------------------------
 
 After collecting data you can run myawrrpt1 scripts to format date and display them on the website.
 
