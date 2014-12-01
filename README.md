@@ -54,13 +54,13 @@ insert agent client inforamtion :
 
 eg :
 
-###INSERT INTO myawr_host(id,host_name,ip_addr,port,db_role,version, running_thread_threshold,times_per_hour) VALUES (6, 'db2.11', '192.168.2.11', 3306, 'master', '5.5.27',10000,0);
+####INSERT INTO myawr_host(id,host_name,ip_addr,port,db_role,version, running_thread_threshold,times_per_hour) VALUES (6, 'db2.11', '192.168.2.11', 3306, 'master', '5.5.27',10000,0);
 
 id should be unique identify to every instance ( for multi instance you should add id=1 and port=x for instance 1 and id=2 and port=y for instance 2)
 
 Then you can run crontab job to collect data as you want
 
-### * * * * sh /usr/local/dbadmin/monitor/myawr21_3309.sh > /tmp/myawr21_3309.log 2>&1
+#### * * * * sh /usr/local/dbadmin/monitor/myawr21_3309.sh > /tmp/myawr21_3309.log 2>&1
 
 ------------------------------------------------------------------------------------------------
 /usr/bin/perl /usr/local/dbadmin/monitor/mysqlawr.pl -u dbadmin -p xxxxx -lh 10.128.6.21 -P 3309 -tu dbmon -tp dbmon -TP 3310 -th 10.128.6.21 -n bond0 -d sdb -I 1
@@ -70,7 +70,7 @@ After collecting data you can run myawrrpt1 scripts to format date and display t
 
 eg:
 
-###perl mysqlawrrpt1.pl -u dbmon -p dbmon -T 3309 -lh 10.128.6.21 -P 3310 -I 1
+####perl mysqlawrrpt1.pl -u dbmon -p dbmon -T 3309 -lh 10.128.6.21 -P 3310 -I 1
 
 ..
 ..
