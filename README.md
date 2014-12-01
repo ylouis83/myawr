@@ -78,7 +78,7 @@ After collecting data  you can run myawrrpt1 scripts to format date and display 
 
 eg:
 
-#perl  mysqlawrrpt1.pl   -u dbmon   -p dbmon  -T 3309  -lh 10.128.6.21 -P 3310 -I 1
+perl  mysqlawrrpt1.pl   -u dbmon   -p dbmon  -T 3309  -lh 10.128.6.21 -P 3310 -I 1
 ===================================================
 |       Welcome to use the myawrrpt tool !   
 |             Date: 2014-12-01
@@ -98,7 +98,7 @@ eg:
 ===================================================
 
 Listing the last 2 days Snapshots
----------------------------------
+
 snap_id:  142192      snap_time : 2014-11-29 18:34:01 
 snap_id:  142240      snap_time : 2014-11-29 19:22:01 
 snap_id:  142288      snap_time : 2014-11-29 20:10:01 
@@ -162,7 +162,7 @@ snap_id:  145024      snap_time : 2014-12-01 17:46:02
 snap_id:  145025      snap_time : 2014-12-01 17:47:01 
 
 Pls select Start and End Snapshot Id
-------------------------------------
+
 Enter value for start_snap:144976
 Start Snapshot Id Is:144976
 
@@ -170,7 +170,7 @@ Enter value for end_snap:145025
 End  Snapshot Id Is:145025
 
 Set the Report Name
--------------------
+
 
 Enter value for report_name:myawr_v3.html
 
