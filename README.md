@@ -4,7 +4,7 @@ history of myawr
 
 Present:
 
-------------------myawr_v3--------------------------------------------------------------------------------
+myawrv3
 
 base on myawr_v2
 
@@ -24,7 +24,7 @@ before install myawr_v3 you need run sys_schema to create formatted views for da
 
 2014/08:
 
------------------ myawr_v2----------------------------------------------------------------------------------
+myawrv2
 
 myawr_v2 was modified by louis liu base on myawr
 
@@ -41,7 +41,6 @@ myawr_v2 add :
 4 add different statistics views
 
 
-#############################################
 
 Myawr is a tool for collecting and analyzing performance data for MySQL database (including os info ,mysql status info and Slow Query Log  all of details). 
 The idea comes from Oracle awr. Myawr periodic collect data and save to the database as snapshots.
