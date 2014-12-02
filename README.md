@@ -12,7 +12,7 @@ myawr_v3 add sys schema information
 
 including performance schema and information schema
 
-so you need open performance schema on you mysql database
+so you need open performance schema on your mysql database
 
 myawr_v3 now support mysql 5.6 GA and will continue support mysql feature version
 
