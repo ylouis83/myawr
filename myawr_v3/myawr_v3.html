@@ -1,0 +1,649 @@
+<html lang="en"><head><title>MySQL WorkLoad Report</title>
+<style type="text/css">
+/* roScripts
+Table Design by Mihalcea Romeo
+www.roscripts.com
+----------------------------------------------- */
+table { border-collapse:collapse;
+		background:#EFF4FB url(http://www.roscripts.com/images/teaser.gif) repeat-x;
+		border-left:1px solid #686868;
+		border-right:1px solid #686868;
+		font:0.8em/145% "Trebuchet MS",helvetica,arial,verdana;
+		color: #333;}
+td, th {padding:1px;}
+caption {padding: 0 0 .5em 0;
+		text-align: left;
+		font-size: 1.4em;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #333;
+		background: transparent;}
+/* =links----------------------------------------------- */
+table a {color:#950000;	text-decoration:none;}
+table a:link {}
+table a:visited {font-weight:normal;color:#666;text-decoration: line-through;}
+table a:hover {	border-bottom: 1px dashed #bbb;}
+/* =head =foot----------------------------------------------- */
+thead th, tfoot th, tfoot td {background:#333 url(http://www.roscripts.com/images/llsh.gif) repeat-x;color:#fff}
+tfoot td {		text-align:right}
+/* =body----------------------------------------------- */
+tbody th, tbody td {border-bottom: dotted 1px #333;}
+tbody th {white-space: nowrap;}
+tbody th a {color:#333;}
+.odd {}
+tbody tr:hover {background:#fafafa}
+</style></head><body>
+<h1 >
+Mysql WorkLoad Report
+</h1>
+<p /><hr />
+
+<p />
+<table border="1"  width="600">
+<tr><th>Host Name</th><th>Ip addr</th><th>Port</th><th>Db role</th><th>Version</th><th>Uptime</th></tr>
+<tr><td>a1-dba-tech01.hz</td><td>10.128.6.21</td><td align="right"> 3309</td><td align="right"> master</td><td align="right"> 5.6.17</td><td align="right"> 0y 5m 24d 2h 59mi 6s</td></tr>
+</table><p />
+<p />
+<table border="2"  width="600">
+<tr><th>Platform</th><th>cores</th><th>cpus</th><th>sockets</th><th>memory</th></tr>
+<tr><td>Linux x86_64
+</td><td>12</td><td align="right"> 24
+</td><td align="right">2
+</td><td align="right"> 126 GB</td></tr>
+</table><p />
+	
+<p />
+<table border="1"  width="600">
+<tr><th></th><th>Snap Id</th><th>Snap Time</th><th>Threads_connected</th><th>Threads_running</th></tr>
+<tr><td>Begin Snap:</td><td align="right">144976</td><td align="center">2014-12-01 16:58:01</td><td align="right">128.00</td><td align="right"> 2.00</td></tr><tr><td>End Snap:</td><td align="right">145025</td><td align="center">2014-12-01 17:47:01</td><td align="right">126.00</td><td align="right"> 2.00</td></tr><tr><td>Elapsed:</td><td colspan=4 > 2940 (seconds)</td></tr>
+</table><p />
+	
+<h3 >Start snap value and end snap value</h3><p />
+<table border="1" width="600">
+<tr><th></th><th>Begin</th><th>End</th><th>Diff</th></tr>	
+<tr><td>query_cache_size                :</td><td align="right">1048576.00                </td><td align="right">1048576.00                 </td><td align="right">0</td></tr> 
+<tr><td>thread_cache_size               :</td><td align="right">48.00               </td><td align="right">48.00                </td><td align="right">0</td></tr> 
+<tr><td>table_definition_cache          :</td><td align="right">784.00          </td><td align="right">784.00           </td><td align="right">0</td></tr> 
+<tr><td>max_connections                 :</td><td align="right">6000.00                 </td><td align="right">6000.00                  </td><td align="right">0</td></tr> 
+<tr><td>table_open_cache                :</td><td align="right">768.00                </td><td align="right">768.00                 </td><td align="right">0</td></tr> 
+<tr><td>slow_launch_time                :</td><td align="right">2.00                </td><td align="right">2.00                 </td><td align="right">0</td></tr> 
+<tr><td>max_heap_table_size             :</td><td align="right">16777216.00             </td><td align="right">16777216.00              </td><td align="right">0</td></tr> 
+<tr><td>tmp_table_size                  :</td><td align="right">1073741824.00                  </td><td align="right">1073741824.00                   </td><td align="right">0</td></tr> 
+<tr><td>open_files_limit                :</td><td align="right">60000.00                </td><td align="right">60000.00                 </td><td align="right">0</td></tr> 
+<tr><td>Max_used_connections            :</td><td align="right">136.00            </td><td align="right">136.00             </td><td align="right">0</td></tr> 
+<tr><td>Threads_connected               :</td><td align="right">128.00               </td><td align="right">126.00                </td><td align="right">-2</td></tr> 
+<tr><td>Threads_cached                  :</td><td align="right">8.00                  </td><td align="right">10.00                   </td><td align="right">2</td></tr> 
+<tr><td>Threads_created                 :</td><td align="right">639.00                 </td><td align="right">639.00                  </td><td align="right">0</td></tr> 
+<tr><td>Threads_running                 :</td><td align="right">2.00                 </td><td align="right">2.00                  </td><td align="right">0</td></tr> 
+<tr><td>Connections                     :</td><td align="right">18847102.00                     </td><td align="right">18852784.00                      </td><td align="right">5682</td></tr> 
+<tr><td>key_buffer_size                 :</td><td align="right">67108864.00                 </td><td align="right">67108864.00                  </td><td align="right">0</td></tr> 
+<tr><td>join_buffer_size                :</td><td align="right">16777216.00                </td><td align="right">16777216.00                 </td><td align="right">0</td></tr> 
+<tr><td>sort_buffer_size                :</td><td align="right">8388608.00                </td><td align="right">8388608.00                 </td><td align="right">0</td></tr> 
+<tr><td>Key_blocks_not_flushed          :</td><td align="right">0.00          </td><td align="right">0.00           </td><td align="right">0</td></tr> 
+<tr><td>Key_blocks_unused               :</td><td align="right">53579.00               </td><td align="right">53579.00                </td><td align="right">0</td></tr> 
+<tr><td>Key_blocks_used                 :</td><td align="right">238.00                 </td><td align="right">238.00                  </td><td align="right">0</td></tr> 
+<tr><td>Key_read_requests               :</td><td align="right">14376733696.00               </td><td align="right">14381009920.00                </td><td align="right">4276224</td></tr> 
+<tr><td>Key_reads                       :</td><td align="right">6.00                       </td><td align="right">6.00                        </td><td align="right">0</td></tr> 
+<tr><td>Key_write_requests              :</td><td align="right">3034217216.00              </td><td align="right">3035064064.00               </td><td align="right">846848</td></tr> 
+<tr><td>Key_writes                      :</td><td align="right">88.00                      </td><td align="right">88.00                       </td><td align="right">0</td></tr> 
+<tr><td>Questions                       :</td><td align="right">1190073728.00                       </td><td align="right">1190239616.00                        </td><td align="right">165888</td></tr> 
+<tr><td>Com_select                      :</td><td align="right">650632704.00                      </td><td align="right">650719104.00                       </td><td align="right">86400</td></tr> 
+<tr><td>Com_insert                      :</td><td align="right">51116112.00                      </td><td align="right">51131372.00                       </td><td align="right">15260</td></tr> 
+<tr><td>Com_update                      :</td><td align="right">127006448.00                      </td><td align="right">127020200.00                       </td><td align="right">13752</td></tr> 
+<tr><td>Com_delete                      :</td><td align="right">73742.00                      </td><td align="right">73742.00                       </td><td align="right">0</td></tr> 
+<tr><td>Bytes_received                  :</td><td align="right">222904401920.00                  </td><td align="right">222952701952.00                   </td><td align="right">48300032</td></tr> 
+<tr><td>Bytes_sent                      :</td><td align="right">2505043607552.00                      </td><td align="right">2505558720512.00                       </td><td align="right">515112960</td></tr> 
+<tr><td>Qcache_hits                     :</td><td align="right">0.00                     </td><td align="right">0.00                      </td><td align="right">0</td></tr> 
+<tr><td>Qcache_inserts                  :</td><td align="right">0.00                  </td><td align="right">0.00                   </td><td align="right">0</td></tr> 
+<tr><td>Select_full_join                :</td><td align="right">532704.00                </td><td align="right">532752.00                 </td><td align="right">48</td></tr> 
+<tr><td>Select_scan                     :</td><td align="right">38490416.00                     </td><td align="right">38501172.00                      </td><td align="right">10756</td></tr> 
+<tr><td>Slow_queries                    :</td><td align="right">8595.00                    </td><td align="right">8605.00                     </td><td align="right">10</td></tr> 
+<tr><td>Com_commit                      :</td><td align="right">149965632.00                      </td><td align="right">149982384.00                       </td><td align="right">16752</td></tr> 
+<tr><td>Com_rollback                    :</td><td align="right">5553.00                    </td><td align="right">5553.00                     </td><td align="right">0</td></tr> 
+<tr><td>Open_files                      :</td><td align="right">64.00                      </td><td align="right">64.00                       </td><td align="right">0</td></tr> 
+<tr><td>Open_table_definitions          :</td><td align="right">276.00          </td><td align="right">276.00           </td><td align="right">0</td></tr> 
+<tr><td>Open_tables                     :</td><td align="right">378.00                     </td><td align="right">378.00                      </td><td align="right">0</td></tr> 
+<tr><td>Opened_files                    :</td><td align="right">28097216.00                    </td><td align="right">28101976.00                     </td><td align="right">4760</td></tr> 
+<tr><td>Opened_table_definitions        :</td><td align="right">24739.00        </td><td align="right">24769.00         </td><td align="right">30</td></tr> 
+<tr><td>Opened_tables                   :</td><td align="right">25293.00                   </td><td align="right">25323.00                    </td><td align="right">30</td></tr> 
+<tr><td>Created_tmp_disk_tables         :</td><td align="right">7009534.00         </td><td align="right">7010709.00          </td><td align="right">1175</td></tr> 
+<tr><td>Created_tmp_files               :</td><td align="right">9237.00               </td><td align="right">9247.00                </td><td align="right">10</td></tr> 
+<tr><td>Created_tmp_tables              :</td><td align="right">44243688.00              </td><td align="right">44252008.00               </td><td align="right">8320</td></tr> 
+<tr><td>Binlog_cache_disk_use           :</td><td align="right">127578.00           </td><td align="right">127619.00            </td><td align="right">41</td></tr> 
+<tr><td>Binlog_cache_use                :</td><td align="right">131804976.00                </td><td align="right">131820936.00                 </td><td align="right">15960</td></tr> 
+<tr><td>Aborted_clients                 :</td><td align="right">1243.00                 </td><td align="right">1243.00                  </td><td align="right">0</td></tr> 
+<tr><td>Sort_merge_passes               :</td><td align="right">222.00               </td><td align="right">222.00                </td><td align="right">0</td></tr> 
+<tr><td>Sort_range                      :</td><td align="right">4962711.00                      </td><td align="right">4962960.00                       </td><td align="right">249</td></tr> 
+<tr><td>Sort_rows                       :</td><td align="right">7117402112.00                       </td><td align="right">7117975040.00                        </td><td align="right">572928</td></tr> 
+<tr><td>Sort_scan                       :</td><td align="right">16841872.00                       </td><td align="right">16843612.00                        </td><td align="right">1740</td></tr> 
+<tr><td>Table_locks_immediate           :</td><td align="right">12576600064.00           </td><td align="right">12576757760.00            </td><td align="right">157696</td></tr> 
+<tr><td>Table_locks_waited              :</td><td align="right">0.00              </td><td align="right">0.00               </td><td align="right">0</td></tr> 
+<tr><td>Handler_read_first              :</td><td align="right">35378416.00              </td><td align="right">35392796.00               </td><td align="right">14380</td></tr> 
+<tr><td>Handler_read_key                :</td><td align="right">214531194880.00                </td><td align="right">214752182272.00                 </td><td align="right">220987392</td></tr> 
+<tr><td>Handler_read_last               :</td><td align="right">6693245.00               </td><td align="right">6701455.00                </td><td align="right">8210</td></tr> 
+<tr><td>Handler_read_next               :</td><td align="right">52197666816.00               </td><td align="right">52208214016.00                </td><td align="right">10547200</td></tr> 
+<tr><td>Handler_read_prev               :</td><td align="right">40321112.00               </td><td align="right">40321112.00                </td><td align="right">0</td></tr> 
+<tr><td>Handler_read_rnd                :</td><td align="right">3451403776.00                </td><td align="right">3451990528.00                 </td><td align="right">586752</td></tr> 
+<tr><td>Innodb_rows_updated             :</td><td align="right">230899760.00             </td><td align="right">230922128.00              </td><td align="right">22368</td></tr> 
+<tr><td>Innodb_rows_deleted             :</td><td align="right">317521.00             </td><td align="right">317521.00              </td><td align="right">0</td></tr> 
+<tr><td>Innodb_rows_read                :</td><td align="right">107164172288.00                </td><td align="right">107206090752.00                 </td><td align="right">41918464</td></tr> 
+<tr><td>Innodb_buffer_pool_read_requests:</td><td align="right">640344784896.00</td><td align="right">640879755264.00 </td><td align="right">534970368</td></tr> 
+<tr><td>Innodb_buffer_pool_reads        :</td><td align="right">4456343.00        </td><td align="right">4456343.00         </td><td align="right">0</td></tr> 
+<tr><td>Innodb_buffer_pool_pages_data   :</td><td align="right">4085181.00   </td><td align="right">4085094.00    </td><td align="right">-87</td></tr> 
+<tr><td>Innodb_buffer_pool_pages_free   :</td><td align="right">8195.00   </td><td align="right">8194.00    </td><td align="right">-1</td></tr> 
+<tr><td>Innodb_buffer_pool_pages_dirty  :</td><td align="right">12.00  </td><td align="right">11.00   </td><td align="right">-1</td></tr> 
+<tr><td>Innodb_buffer_pool_pages_flushed:</td><td align="right">2320867584.00</td><td align="right">2321790976.00 </td><td align="right">923392</td></tr> 
+<tr><td>Innodb_data_reads               :</td><td align="right">5104538.00               </td><td align="right">5104538.00                </td><td align="right">0</td></tr> 
+<tr><td>Innodb_data_writes              :</td><td align="right">2574532608.00              </td><td align="right">2575519488.00               </td><td align="right">986880</td></tr> 
+<tr><td>Innodb_data_read                :</td><td align="right">83551141888.00                </td><td align="right">83551141888.00                 </td><td align="right">0</td></tr> 
+<tr><td>Innodb_data_written             :</td><td align="right">76643875946496.00             </td><td align="right">76674267873280.00              </td><td align="right">30391926784</td></tr> 
+<tr><td>Innodb_os_log_fsyncs            :</td><td align="right">151359296.00            </td><td align="right">151380368.00             </td><td align="right">21072</td></tr> 
+<tr><td>Innodb_os_log_written           :</td><td align="right">593131339776.00           </td><td align="right">593270079488.00            </td><td align="right">138739712</td></tr> 
+<tr><td>history_list                    :</td><td align="right">2394.00                    </td><td align="right">2050.00                     </td><td align="right">-344</td></tr> 
+<tr><td>log_bytes_written               :</td><td align="right">532056571904.00               </td><td align="right">532184760320.00                </td><td align="right">128188416</td></tr> 
+<tr><td>log_bytes_flushed               :</td><td align="right">532056571904.00               </td><td align="right">532184760320.00                </td><td align="right">128188416</td></tr> 
+<tr><td>last_checkpoint                 :</td><td align="right">532056571904.00                 </td><td align="right">532184727552.00                  </td><td align="right">128155648</td></tr> 
+<tr><td>queries_inside                  :</td><td align="right">0.00                  </td><td align="right">0.00                   </td><td align="right">0</td></tr> 
+<tr><td>queries_queued                  :</td><td align="right">0.00                  </td><td align="right">0.00                   </td><td align="right">0</td></tr> 
+<tr><td>read_views                      :</td><td align="right">0.00                      </td><td align="right">0.00                       </td><td align="right">0</td></tr> 
+<tr><td>innodb_open_files               :</td><td align="right">4096.00               </td><td align="right">4096.00                </td><td align="right">0</td></tr> 
+<tr><td>innodb_log_waits                :</td><td align="right">0.00                </td><td align="right">0.00                 </td><td align="right">0</td></tr>
+
+</table><p />
+<hr />
+
+<p/><h3>Some Key Load Info</h3>  <p />
+<table border="1" width="600">
+<tr><th></th><th>Per Second</th></tr>
+<tr><td>TPS:</td><td align="right"> 9</td></tr>
+<tr><td>Com_select(s):</td><td align="right"> 29 </td></tr>
+<tr><td>Com_insert(s):</td><td align="right"> 5</td></tr>
+<tr><td>Com_update(s):</td><td align="right"> 4</td></tr>
+<tr><td>Com_delete(s):</td><td align="right"> 0</td></tr>
+<tr><td>Innodb t_row PS:</td><td align="right"> 313 </td></tr>
+
+<tr><td>Innodb_rows_inserted(s):</td><td align="right">306 </td></tr>
+<tr><td>Innodb_rows_updated(s):</td><td align="right"> 7 </td></tr>
+<tr><td>Innodb_rows_deleted(s):</td><td align="right"> 0</td></tr>
+<tr><td>Innodb_rows_read(s):</td><td align="right"> 14257 </td></tr>
+
+<tr><td>Innodb_data_reads(s):</td><td align="right"> 0 </td></tr>
+<tr><td>Innodb_data_writes(s):</td><td align="right"> 335</td></tr>
+
+<tr><td>Innodb_data_read(kb/s):</td><td align="right">0 </td></tr>
+<tr><td>Innodb_data_written(kb/s):</td><td align="right">10095 </td></tr>
+
+<tr><td>Innodb_os_log_fsyncs(s):</td><td align="right">7 </td></tr>
+<tr><td>Innodb_os_log_written(kb/s):</td><td align="right">46 </td></tr>
+</table><p /><hr />
+	
+<p /><h3>Some Key Hits</h3><p />
+<table border="1" width="600">
+<tr><th></th><th>Percentage</th></tr>
+<tr><td>key_buffer_read_hits %:</td><td align="right">100</td></tr>
+<tr><td>key_buffer_write_hits %:</td><td align="right">100</td></tr>
+<tr><td>Innodb_buffer_read_hits %:</td><td align="right">100</td></tr>
+<tr><td>Query_cache_hits %:</td><td align="right">0</td></tr>
+<tr><td>Thread_cache_hits %:</td><td align="right">100</td></tr>
+</table><p /><p /><hr/>		
+	<p /><h3>Top 10 Timed Events</h3><p /><table border="1" width="600" > <tr><th>event_name</th><th>wait time(picsecond)</th><th>wait count</th></tr><tr><td>wait/io/table/sql/handler</td><td align="right">353949694556535</td><td align="right">18654836</td></tr>
+<tr><td>wait/io/file/innodb/innodb_data_file</td><td align="right">48921080697335</td><td align="right">1050462</td></tr>
+<tr><td>wait/io/file/innodb/innodb_log_file</td><td align="right">8976181435760</td><td align="right">42128</td></tr>
+<tr><td>wait/io/file/myisam/dfile</td><td align="right">6037627875510</td><td align="right">3250229</td></tr>
+<tr><td>wait/io/file/sql/binlog</td><td align="right">5049307555985</td><td align="right">85114</td></tr>
+<tr><td>wait/io/file/myisam/kfile</td><td align="right">389958809625</td><td align="right">38783</td></tr>
+<tr><td>wait/lock/table/sql/handler</td><td align="right">224775804715</td><td align="right">297586</td></tr>
+<tr><td>wait/io/file/sql/dbopt</td><td align="right">2852096940</td><td align="right">367</td></tr>
+<tr><td>wait/io/file/sql/FRM</td><td align="right">1808381575</td><td align="right">450</td></tr>
+<tr><td>wait/io/file/sql/slow_log</td><td align="right">268795835</td><td align="right">16</td></tr>
+</table><p /><h3>Top 10 read file Events</h3><p />   <table border="1" width="600" > <tr><th>event_name</th><th>read bytes</th><th>read count</th></tr><tr>   <td>wait/io/file/myisam/dfile</td><td align="right">289170779</td><td align="right">1664825</td></tr>
+<tr>   <td>wait/io/file/sql/binlog</td><td align="right">31598182</td><td align="right">50015</td></tr>
+<tr>   <td>wait/io/file/myisam/kfile</td><td align="right">659799</td><td align="right">2350</td></tr>
+<tr>   <td>wait/io/file/sql/FRM</td><td align="right">67910</td><td align="right">230</td></tr>
+<tr>   <td>wait/io/file/sql/global_ddl_log</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>wait/io/file/innodb/innodb_log_file</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>wait/io/file/sql/des_key_file</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>wait/io/file/myisammrg/MRG</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>wait/io/file/sql/binlog_index</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>wait/io/file/mysys/proc_meminfo</td><td align="right">0</td><td align="right">0</td></tr>
+</table><p /><h3>Top 10 write file Events</h3><p /><table border="1" width="600" > <tr><th>event_name</th><th>read bytes</th><th>read count</th></tr><tr><td>wait/io/file/innodb/innodb_data_file</td><td align="right">30198071296</td><td align="right">956375</td></tr>
+<tr><td>wait/io/file/myisam/dfile</td><td align="right">167769276</td><td align="right">744321</td></tr>
+<tr><td>wait/io/file/innodb/innodb_log_file</td><td align="right">138348544</td><td align="right">21070</td></tr>
+<tr><td>wait/io/file/sql/binlog</td><td align="right">31598182</td><td align="right">19161</td></tr>
+<tr><td>wait/io/file/myisam/kfile</td><td align="right">743721</td><td align="right">28208</td></tr>
+<tr><td>wait/io/file/sql/slow_log</td><td align="right">6248</td><td align="right">11</td></tr>
+<tr><td>wait/io/file/sql/global_ddl_log</td><td align="right">0</td><td align="right">0</td></tr>
+<tr><td>wait/io/file/sql/des_key_file</td><td align="right">0</td><td align="right">0</td></tr>
+<tr><td>wait/io/file/myisammrg/MRG</td><td align="right">0</td><td align="right">0</td></tr>
+<tr><td>wait/io/file/sql/binlog_index</td><td align="right">0</td><td align="right">0</td></tr>
+</table><p /><hr/><p /><p /><h2>Performance Schema Stats</h2><p /><p /><h3>Top IO Stat by host</h3><p />   <table border="1" width="600" > <tr><th>host_name</th><th>io_count</th><th>io_latency_count(ms)</th></tr><tr>   <td>10.128.250.51</td><td align="right">3355098</td><td align="right">18161.34</td></tr>
+<tr>   <td>10.128.6.22</td><td align="right">50015</td><td align="right">138.37</td></tr>
+<tr>   <td>10.128.3.57</td><td align="right">2275</td><td align="right">354.54</td></tr>
+<tr>   <td>10.128.6.21</td><td align="right">300</td><td align="right">1.18</td></tr>
+<tr>   <td>10.128.250.50</td><td align="right">0</td><td align="right">0.00</td></tr>
+<tr>   <td>10.128.3.46</td><td align="right">0</td><td align="right">0.00</td></tr>
+<tr>   <td>10.128.250.101</td><td align="right">0</td><td align="right">0.00</td></tr>
+</table><p /><h3>Top Summary statment by host</h3><p />   <table border="1" width="900" > <tr><th>host</th><th>total</th><th>total_latency</th><th>max_latency</th><th>lock_latency</th><th>rows_sent</th><th>rows_examined</th><th>rows_affected</th><th>full_scans</th></tr><tr>   <td>10.128.250.51</td><td align="right">149116</td><td align="right">466724.91</td><td align="right">6605055.36</td><td align="right">15217.93</td><td align="right">4563314</td><td align="right">14990892</td><td align="right">938556</td><td align="right">7584</td></tr>
+<tr>   <td>10.128.6.21</td><td align="right">1726</td><td align="right">54270.12</td><td align="right">839.17</td><td align="right">329.14</td><td align="right">41459</td><td align="right">2819568</td><td align="right">0</td><td align="right">1079</td></tr>
+<tr>   <td>10.128.3.57</td><td align="right">11095</td><td align="right">1167.37</td><td align="right">7845.02</td><td align="right">77.20</td><td align="right">3307</td><td align="right">1028</td><td align="right">661</td><td align="right">367</td></tr>
+<tr>   <td>10.128.6.230</td><td align="right">1176</td><td align="right">989.75</td><td align="right">89.33</td><td align="right">64.57</td><td align="right">100254</td><td align="right">100254</td><td align="right">0</td><td align="right">588</td></tr>
+<tr>   <td>10.128.3.46</td><td align="right">0</td><td align="right">0.00</td><td align="right">10.10</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>10.128.6.22</td><td align="right">0</td><td align="right">0.00</td><td align="right">1.08</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>10.128.250.101</td><td align="right">0</td><td align="right">0.00</td><td align="right">495.14</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>10.128.250.50</td><td align="right">0</td><td align="right">0.00</td><td align="right">214.18</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+</table><p /><h3>Top IO Stat by user </h3><p />   <table border="1" width="600" > <tr><th>user_name</th><th>io_count</th><th>io_latency_count(ms)</th></tr><tr>   <td>zabbix</td><td align="right">3355090</td><td align="right">18160.36</td></tr>
+<tr>   <td>background</td><td align="right">1059957</td><td align="right">50729.87</td></tr>
+<tr>   <td>repl</td><td align="right">50005</td><td align="right">138.34</td></tr>
+<tr>   <td>dbadmin</td><td align="right">2575</td><td align="right">355.72</td></tr>
+<tr>   <td>sms</td><td align="right">0</td><td align="right">0.00</td></tr>
+<tr>   <td>dbread</td><td align="right">0</td><td align="right">0.00</td></tr>
+<tr>   <td>root</td><td align="right">0</td><td align="right">0.00</td></tr>
+<tr>   <td>dbmonitor</td><td align="right">0</td><td align="right">0.00</td></tr>
+</table><p /><h3>Top Summary statment by user</h3><p />   <table border="1" width="900" > <tr><th>user</th><th>total</th><th>total_latency</th><th>max_latency</th><th>lock_latency</th><th>rows_sent</th><th>rows_examined</th><th>rows_affected</th><th>full_scans</th></tr><tr>   <td>zabbix</td><td align="right">149168</td><td align="right">466822.70</td><td align="right">6605049.96</td><td align="right">15222.21</td><td align="right">4563453</td><td align="right">14991198</td><td align="right">938560</td><td align="right">7594</td></tr>
+<tr>   <td>dbadmin</td><td align="right">13997</td><td align="right">56435.93</td><td align="right">8741.97</td><td align="right">470.95</td><td align="right">145020</td><td align="right">2920850</td><td align="right">661</td><td align="right">2034</td></tr>
+<tr>   <td>dbmonitor</td><td align="right">3435</td><td align="right">527.06</td><td align="right">28.15</td><td align="right">80.13</td><td align="right">1766</td><td align="right">883</td><td align="right">0</td><td align="right">883</td></tr>
+<tr>   <td>repl</td><td align="right">0</td><td align="right">0.00</td><td align="right">1.08</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>dbread</td><td align="right">0</td><td align="right">0.00</td><td align="right">708.87</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>root</td><td align="right">0</td><td align="right">0.00</td><td align="right">666646.03</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>sms</td><td align="right">0</td><td align="right">0.00</td><td align="right">60.66</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td></tr>
+</table><p /><h3>Global Read File IO by Bytes</h3><p />   <table border="1" width="900" > <tr><th>file_name</th><th>count_read</th><th>total_read(KB)</th><th>avg_read(KB)</th><th>write_pct</th></tr><tr>   <td>@@datadir/mysql/proc.MYD</td><td align="right">196</td><td align="right">276.96</td><td align="right">1.43</td><td align="right">0.58</td></tr>
+<tr>   <td>@@datadir/zabbix/tmp_his.frm</td><td align="right">230</td><td align="right">66.32</td><td align="right">0.29</td><td align="right">0.01</td></tr>
+<tr>   <td>@@datadir/zabbix/events.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">99.89</td></tr>
+<tr>   <td>@@datadir/zabbix/functions.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">99.49</td></tr>
+<tr>   <td>@@datadir/zabbix/#sql-886f_9e82c6.frm</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.56</td><td align="right">66.24</td></tr>
+<tr>   <td>@@datadir/zabbix/item_discovery.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/graphs_items.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">99.31</td></tr>
+<tr>   <td>@@datadir/zabbix/httptest.frm</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.50</td><td align="right">0.00</td></tr>
+<tr>   <td>@@datadir/zabbix/triggers.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">99.97</td></tr>
+<tr>   <td>@@datadir/zabbix/auditlog.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">16.00</td><td align="right">96.05</td></tr>
+</table><p /><h3>Global Write File IO by Bytes</h3><p />   <table border="1" width="900" > <tr><th>file_name</th><th>count_write</th><th>total_write(KB)</th><th>avg_write(KB)</th><th>write_pct</th></tr><tr>   <td>@@datadir/ibdata0</td><td align="right">72414</td><td align="right">15252992.00</td><td align="right">157.95</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/events.ibd</td><td align="right">13769</td><td align="right">220304.00</td><td align="right">16.11</td><td align="right">99.89</td></tr>
+<tr>   <td>@@datadir/ib_logfile3</td><td align="right">20633</td><td align="right">134884.50</td><td align="right">3.84</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/sessions.ibd</td><td align="right">2278</td><td align="right">40480.00</td><td align="right">16.05</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/item_discovery.ibd</td><td align="right">1322</td><td align="right">21152.00</td><td align="right">16.00</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/hosts.ibd</td><td align="right">640</td><td align="right">10240.00</td><td align="right">16.00</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/test/dml_health_check.ibd</td><td align="right">367</td><td align="right">5872.00</td><td align="right">16.00</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/groups_performance.ibd</td><td align="right">98</td><td align="right">5600.00</td><td align="right">20.37</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/test/heartbeat.ibd</td><td align="right">294</td><td align="right">4704.00</td><td align="right">16.00</td><td align="right">100.00</td></tr>
+<tr>   <td>@@datadir/zabbix/triggers.ibd</td><td align="right">131</td><td align="right">2096.00</td><td align="right">16.01</td><td align="right">99.97</td></tr>
+</table><p /><hr/><p /><p /><h3>Global File IO Latency</h3><p />   <table border="1" width="1100" > <tr><th>file_name</th><th>total</th><th>total_latency(ms)</th><th>count_read</th><th>read_latency(ms)</th><th>count_write</th><th>write_latency(ms)</th><th>count_misc</th><th>misc_latency(ms)</th></tr><tr>   <td>@@datadir/ibdata0</td><td align="right">124687</td><td align="right">17682.43</td><td align="right">0</td><td align="right">0.00</td><td align="right">72414.00</td><td align="right">12841.89</td><td align="right">52273.00</td><td align="right">4840.54</td></tr>
+<tr>   <td>@@datadir/ib_logfile3</td><td align="right">41260</td><td align="right">8809.46</td><td align="right">0</td><td align="right">0.00</td><td align="right">20630.00</td><td align="right">1398.14</td><td align="right">20630.00</td><td align="right">7411.32</td></tr>
+<tr>   <td>@@datadir/zabbix/events.ibd</td><td align="right">25232</td><td align="right">2132.59</td><td align="right">0</td><td align="right">0.00</td><td align="right">13769.00</td><td align="right">531.55</td><td align="right">11463.00</td><td align="right">1601.04</td></tr>
+<tr>   <td>@@datadir/zabbix/item_discovery.ibd</td><td align="right">2406</td><td align="right">208.35</td><td align="right">0</td><td align="right">0.00</td><td align="right">1322.00</td><td align="right">47.06</td><td align="right">1084.00</td><td align="right">161.29</td></tr>
+<tr>   <td>@@datadir/ib_logfile0</td><td align="right">858</td><td align="right">164.88</td><td align="right">0</td><td align="right">0.00</td><td align="right">429.00</td><td align="right">15.49</td><td align="right">429.00</td><td align="right">149.39</td></tr>
+<tr>   <td>@@datadir/zabbix/escalations.ibd</td><td align="right">6</td><td align="right">0.76</td><td align="right">0</td><td align="right">0.00</td><td align="right">3.00</td><td align="right">0.14</td><td align="right">3.00</td><td align="right">0.62</td></tr>
+<tr>   <td>@@datadir/ib_logfile1</td><td align="right">0</td><td align="right">0.00</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td></tr>
+<tr>   <td>@@datadir/zabbix/trends_uint#P#p201410.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td></tr>
+<tr>   <td>@@datadir/zabbix/history_uint#P#p20140929.ibd</td><td align="right">0</td><td align="right">0.00</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td></tr>
+<tr>   <td>@@datadir/ib_logfile2</td><td align="right">0</td><td align="right">0.00</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td></tr>
+</table><p /><h3>Global Event IO Latency</h3><p />   <table border="1" width="1100" > <tr><th>event_name</th><th>total</th><th>total_latency(ms)</th><th>avg_latency(ms)</th><th>max_latency(ms)</th><th>read_latency(ms)</th><th>write_latency(ms)</th><th>misc_latency(ms)</th><th>total_read</th><th>total_written</th></tr><tr>   <td>innodb/innodb_data_file</td><td align="right">1050467</td><td align="right">48921.23</td><td align="right">0.05</td><td align="right">3757.52</td><td align="right">0.00</td><td align="right">39902.80</td><td align="right">9018.43</td><td align="right">0</td><td align="right">30197317632</td></tr>
+<tr>   <td>innodb/innodb_log_file</td><td align="right">42116</td><td align="right">8974.05</td><td align="right">0.20</td><td align="right">7323.70</td><td align="right">0.00</td><td align="right">1413.60</td><td align="right">7560.44</td><td align="right">0</td><td align="right">138337792</td></tr>
+<tr>   <td>sql/binlog</td><td align="right">85096</td><td align="right">5047.94</td><td align="right">0.06</td><td align="right">2891.94</td><td align="right">138.31</td><td align="right">475.17</td><td align="right">4434.47</td><td align="right">31595564</td><td align="right">31595564</td></tr>
+<tr>   <td>myisam/dfile</td><td align="right">3250229</td><td align="right">6037.63</td><td align="right">0.00</td><td align="right">185.38</td><td align="right">1461.73</td><td align="right">4042.20</td><td align="right">533.70</td><td align="right">289170779</td><td align="right">167769276</td></tr>
+<tr>   <td>myisam/kfile</td><td align="right">38783</td><td align="right">389.96</td><td align="right">0.01</td><td align="right">1458.66</td><td align="right">5.02</td><td align="right">131.17</td><td align="right">253.76</td><td align="right">659799</td><td align="right">743721</td></tr>
+<tr>   <td>sql/dbopt</td><td align="right">367</td><td align="right">2.85</td><td align="right">0.01</td><td align="right">25.76</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">2.85</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>sql/FRM</td><td align="right">450</td><td align="right">1.81</td><td align="right">0.01</td><td align="right">36.93</td><td align="right">0.40</td><td align="right">0.00</td><td align="right">1.41</td><td align="right">67910</td><td align="right">0</td></tr>
+<tr>   <td>sql/slow_log</td><td align="right">16</td><td align="right">0.27</td><td align="right">0.03</td><td align="right">14.72</td><td align="right">0.00</td><td align="right">0.17</td><td align="right">0.10</td><td align="right">0</td><td align="right">6248</td></tr>
+<tr>   <td>innodb/innodb_temp_file</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.60</td><td align="right">8.80</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td></tr>
+<tr>   <td>sql/binlog_index</td><td align="right">0</td><td align="right">0.00</td><td align="right">0.09</td><td align="right">15.29</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0.00</td><td align="right">0</td><td align="right">0</td></tr>
+</table><p /><h3>Global Event Class Wait latency  </h3><p />   <table border="1" width="1100" > <tr><th>event_class</th><th>total</th><th>total_latency</th><th>min_latency</th><th>avg_latency</th><th>max_latency</th></tr><tr>   <td>wait/io/file</td><td align="right">16757168226</td><td align="right">69.86h</td><td align="right">0 ps</td><td align="right">15.01 us</td><td align="right">7.32 s</td></tr>
+<tr>   <td>wait/io/table</td><td align="right">88077551769</td><td align="right">138.59h</td><td align="right">30.03 ns</td><td align="right">5.66 us</td><td align="right">4.29 s</td></tr>
+<tr>   <td>wait/lock/table</td><td align="right">12906567226</td><td align="right">1.38h</td><td align="right">20.79 ns</td><td align="right">384.41 ns</td><td align="right">10.31 ms</td></tr>
+</table><p /><hr/><p /><p /><h3>Global Satament Table Full Scan</h3><p />   <table border="1" width="1100" > <tr><th>db</th><th>exec_count</th><th>no_idx_count</th><th>no_gidx_count</th><th>no_ind_use_pct</th><th>rows_sent</th><th>rows_exam</th><th>last_seen_time_stamp</th></tr><tr>   <td>zabbix</td><td align="right">10675316</td><td align="right">10675316</td><td align="right">0</td><td align="right">100</td><td align="right">3661998826</td><td align="right">7323997652</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">3737197</td><td align="right">3738290</td><td align="right">0</td><td align="right">100</td><td align="right">3737922</td><td align="right">3738068</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">1205678</td><td align="right">1205722</td><td align="right">0</td><td align="right">100</td><td align="right">1205701</td><td align="right">1205703</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">247850</td><td align="right">247850</td><td align="right">0</td><td align="right">100</td><td align="right">247846</td><td align="right">247898</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">247850</td><td align="right">247850</td><td align="right">0</td><td align="right">100</td><td align="right">247850</td><td align="right">247850</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">2921843</td><td align="right">2</td><td align="right">0</td><td align="right">0</td><td align="right">2921843</td><td align="right">5844465</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">246219</td><td align="right">246219</td><td align="right">0</td><td align="right">100</td><td align="right">143302064</td><td align="right">143302064</td><td align="right">2014-12-01 17:47:02</td></tr>
+<tr>   <td>zabbix</td><td align="right">246219</td><td align="right">246219</td><td align="right">0</td><td align="right">100</td><td align="right">1049633</td><td align="right">803414</td><td align="right">2014-12-01 17:47:02</td></tr>
+<tr>   <td>zabbix</td><td align="right">246220</td><td align="right">246220</td><td align="right">0</td><td align="right">100</td><td align="right">75221087</td><td align="right">86418318</td><td align="right">2014-12-01 17:47:01</td></tr>
+<tr>   <td>zabbix</td><td align="right">246219</td><td align="right">246219</td><td align="right">0</td><td align="right">100</td><td align="right">129293425</td><td align="right">129293425</td><td align="right">2014-12-01 17:47:01</td></tr>
+</table><p /><h3>Global Satament Table Full SQL </h3><p />   <table border="1" width="1100" > <tr><th>query</th><th>digest</th></tr><tr>   <td>SELECT `escalationid` , `actionid` , `triggerid` , `eventid` , `r_eventid` , `nextcheck` , `esc_step` , STATUS , `itemid` FROM `escalations` ORDER BY `actionid` , `triggerid` , `itemid` , `escalationid` </td><td align="right">e658ad35a5912d7cfeed39d0e65624af</td></tr>
+<tr>   <td>SELECT `dv` . `mandatory` , `dv` . `optional` FROM `dbversion` `dv` </td><td align="right">b4a3f50693a3f75f89b48a3ca26a861b</td></tr>
+<tr>   <td>SELECT `c` . * FROM `config` `c` </td><td align="right">0e12373dffaecb705e39b000fd42ddf6</td></tr>
+<tr>   <td>SELECT `t` . `hostmacroid` , `t` . `hostid` , `t` . `macro` , `t` . `value` FROM `hostmacro` `t` WHERE ( `t` . `hostid` BETWEEN ? AND ? OR `t` . `hostid` BETWEEN ? AND ? OR `t` . `hostid` IN (...) ) ORDER BY `t` . `hostmacroid` </td><td align="right">fc8a55cdfec89bff6c5653330d0cc4eb</td></tr>
+<tr>   <td>SELECT `t` . `globalmacroid` , `t` . `macro` , `t` . `value` FROM `globalmacro` `t` ORDER BY `t` . `globalmacroid` </td><td align="right">7974aba897a76c8c89d27c3987d2cb4d</td></tr>
+<tr>   <td>SELECT `hostid` , STATUS FROM HOSTS WHERE HOST = ? AND STATUS IN (...) </td><td align="right">9ef63b35db6f2276a6011fee83581ab0</td></tr>
+<tr>   <td>SELECT `d` . `triggerid_down` , `d` . `triggerid_up` FROM `trigger_depends` `d` ORDER BY `d` . `triggerid_down` </td><td align="right">cd3ff4b5b0128bd064e6ac9f43f53e09</td></tr>
+<tr>   <td>SELECT `r` . `name` , `e` . `expressionid` , `e` . `expression` , `e` . `expression_type` , `e` . `exp_delimiter` , `e` . `case_sensitive` FROM `regexps` `r` , `expressions` `e` WHERE `r` . `regexpid` = `e` . `regexpid` </td><td align="right">98a25c864505a55f225b9223b0037d30</td></tr>
+<tr>   <td>SELECT `hostid` , `proxy_hostid` , HOST , `ipmi_authtype` , `ipmi_privilege` , `ipmi_username` , `ipmi_password` , `maintenance_status` , `maintenance_type` , `maintenance_from` , `errors_from` , `available` , `disable_until` , `snmp_errors_from` , `snmp_available` , `snmp_disable_until` , `ipmi_errors_from` , `ipmi_available` , `ipmi_disable_until` , `jmx_errors_from` , `jmx_available` , `jmx_disable_until` , STATUS , NAME FROM HOSTS WHERE STATUS IN (...) AND `flags` != ? </td><td align="right">0a513ea43c133bdaa6e384bb71b3b472</td></tr>
+<tr>   <td>SELECT `hostid` , `templateid` FROM `hosts_templates` ORDER BY `hostid` , `templateid` </td><td align="right">72469696ed699567a97cd1af91d1f5b7</td></tr>
+</table><p /><h3>Global Satament TEMP Table Usage </h3><p />   <table border="1" width="1100" > <tr><th>db</th><th>exec_count</th><th>total_latency(ms)</th><th>memory_tmp_tables</th><th>disk_tmp_tables</th><th>avg_tmp_tables_per_query</th><th>tmp_tables_to_disk_pct</th><th>last_seen</th></tr><tr>   <td>zabbix</td><td align="right">6373892</td><td align="right">7182546.48</td><td align="right">6373894</td><td align="right">6373894</td><td align="right">1</td><td align="right">100</td><td align="right">2014-12-01 17:46:55</td></tr>
+<tr>   <td>zabbix</td><td align="right">501069</td><td align="right">281280.66</td><td align="right">8775</td><td align="right">8775</td><td align="right">0</td><td align="right">100</td><td align="right">2014-12-01 17:46:43</td></tr>
+<tr>   <td>zabbix</td><td align="right">6529073</td><td align="right">2406121.62</td><td align="right">6529152</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 17:46:55</td></tr>
+<tr>   <td>zabbix</td><td align="right">6373872</td><td align="right">3617498.02</td><td align="right">6373889</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 17:46:55</td></tr>
+<tr>   <td>zabbix</td><td align="right">1385207</td><td align="right">585526.44</td><td align="right">1385834</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 14:27:17</td></tr>
+<tr>   <td>zabbix</td><td align="right">247850</td><td align="right">151342.39</td><td align="right">247850</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">247850</td><td align="right">73528.05</td><td align="right">247850</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">247850</td><td align="right">79208.01</td><td align="right">247850</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 17:47:03</td></tr>
+<tr>   <td>zabbix</td><td align="right">171673</td><td align="right">96837.30</td><td align="right">171684</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 14:27:32</td></tr>
+<tr>   <td>zabbix</td><td align="right">208725</td><td align="right">63015.85</td><td align="right">128660</td><td align="right">0</td><td align="right">1</td><td align="right">0</td><td align="right">2014-12-01 14:27:17</td></tr>
+</table><p /><h3>Global Satament TEMP Table SQL</h3><p />   <table border="1" width="1100" > <tr><th>query</th><th>digest</th></tr><tr>   <td>SELECT DISTINCTROW `t` . `triggerid` , `t` . `description` , `t` . `expression` , `t` . `status` , `t` . `type` , `t` . `priority` , `t` . `comments` , `t` . `url` FROM TRIGGERS `t` , `functions` `f` , `items` `i` , `item_discovery` `id` WHERE `t` . `triggerid` = `f` . `triggerid` AND `f` . `itemid` = `i` . `itemid` AND `i` . `itemid` = `id` . `itemid` AND `id` . `parent_itemid` = ? </td><td align="right">7a980a590fedd684ec08c891af751ce2</td></tr>
+<tr>   <td>SELECT `a` . `alertid` , `a` . `mediatypeid` , `a` . `sendto` , `a` . `subject` , `a` . `message` , `a` . `status` , `mt` . `mediatypeid` , `mt` . `type` , `mt` . `description` , `mt` . `smtp_server` , `mt` . `smtp_helo` , `mt` . `smtp_email` , `mt` . `exec_path` , `mt` . `gsm_modem` , `mt` . `username` , `mt` . `passwd` , `a` . `retries` FROM `alerts` `a` , `media_type` `mt` WHERE `a` . `mediatypeid` = `mt` . `mediatypeid` AND `a` . `status` = ? AND `a` . `alerttype` = ? ORDER BY `a` . `alertid` </td><td align="right">1ad601430fb9bfa8eb8442130e7afe50</td></tr>
+<tr>   <td>SELECT DISTINCTROW `i` . `itemid` , `i` . `flags` FROM `items` `i` , `functions` `f` WHERE `i` . `itemid` = `f` . `itemid` AND `f` . `triggerid` = ? </td><td align="right">74e3e0ae4565f56895d19349aabeb609</td></tr>
+<tr>   <td>SELECT DISTINCTROW `g` . `graphid` , `g` . `name` , `g` . `width` , `g` . `height` , `g` . `yaxismin` , `g` . `yaxismax` , `g` . `show_work_period` , `g` . `show_triggers` , `g` . `graphtype` , `g` . `show_legend` , `g` . `show_3d` , `g` . `percent_left` , `g` . `percent_right` , `g` . `ymin_type` , `g` . `ymin_itemid` , `g` . `ymax_type` , `g` . `ymax_itemid` FROM `graphs` `g` , `graphs_items` `gi` , `items` `i` , `item_discovery` `id` WHERE `g` . `graphid` = `gi` . `graphid` AND `gi` . `itemid` = `i` . `itemid` AND `i` . `itemid` = `id` . `itemid` AND `id` . `parent_itemid` = ? </td><td align="right">d1b740728a17c7ee2aa3803f014716e6</td></tr>
+<tr>   <td>SELECT DISTINCTROW `hg` . `groupid` FROM `hosts_groups` `hg` , HOSTS `h` , `items` `i` , `functions` `f` , TRIGGERS `t` WHERE `hg` . `hostid` = `h` . `hostid` AND `h` . `hostid` = `i` . `hostid` AND `i` . `itemid` = `f` . `itemid` AND `f` . `triggerid` = `t` . `triggerid` AND `t` . `triggerid` = ? AND `hg` . `groupid` = ? </td><td align="right">4c579b42a0516bebedce3c27155fc274</td></tr>
+<tr>   <td>SELECT DISTINCTROW `templateid` FROM `hosts_templates` WHERE ( `hostid` BETWEEN ? AND ? OR `hostid` IN (...) ) </td><td align="right">06e56078d4bfa5f19d53b7de9842b984</td></tr>
+<tr>   <td>SELECT DISTINCTROW `templateid` FROM `hosts_templates` WHERE `hostid` IN (...) </td><td align="right">32a0a17611ff06cbd4a84b3847fa118a</td></tr>
+<tr>   <td>SELECT `t` . `groupid` FROM `groups` `t` , `config` `r` WHERE `t` . `groupid` = `r` . `discovery_groupid` ORDER BY `t` . `groupid` </td><td align="right">d4785ceb1e8bf4dab713d8c29b599882</td></tr>
+<tr>   <td>SELECT DISTINCTROW `a` . * , `u` . `alias` , `u` . `name` , `u` . `surname` FROM `acknowledges` `a` , `users` `u` WHERE `a` . `eventid` IN (...) AND `a` . `userid` = `u` . `userid` ORDER BY `a` . `clock` DESC </td><td align="right">1f429a59149a31fccb7c6bef398dc174</td></tr>
+<tr>   <td>SELECT DISTINCTROW `i` . `hostid` , `t` . `templateid` FROM `items` `i` , `functions` `f` , TRIGGERS `t` WHERE `i` . `itemid` = `f` . `itemid` AND `f` . `triggerid` = `t` . `templateid` AND `t` . `triggerid` = ? </td><td align="right">6e2860d2c925cbe1130f10eef6dbbd6f</td></tr>
+</table><p /><hr/><p /><p /><h3>Global Segments by Index </h3><p />   <table border="1" width="1100" > <tr><th>table_schema</th><th>table_name</th><th>index_name</th><th>rows_selected</th><th>select_latency(ms)</th><th>rows_inserted</th><th>insert_latency(ms)</th><th>rows_updated</th><th>update_latency(ms)</th><th>rows_deleted</th><th>delete_latency(ms)</th></tr><tr>   <td>zabbix</td><td align="right">items</td><td>items_1</td><td>8083593</td><td>21094.34</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">functions</td><td>functions_2</td><td>6803698</td><td>16096.50</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">triggers</td><td>PRIMARY</td><td>1710786</td><td>3555.35</td><td>0</td><td>0.00</td><td>40</td><td>7.20</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">history</td><td>history_1</td><td>521540</td><td>293733.58</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">items</td><td>PRIMARY</td><td>36808</td><td>343.15</td><td>0</td><td>0.00</td><td>244</td><td>8.42</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">functions</td><td>functions_1</td><td>15616</td><td>95.94</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">hosts</td><td>PRIMARY</td><td>4120</td><td>52.72</td><td>0</td><td>0.00</td><td>670</td><td>37.11</td><td>0</td><td>0.00</td></tr>
+</table><p /><h3>Global Segments by Table </h3><p />   <table border="1" width="1100" > <tr><th>table_schema</th><th>table_name</th><th>rows_selected</th><th>select_latency(ms)</th><th>rows_inserted</th><th>insert_latency(ms)</th><th>rows_updated</th><th>update_latency(ms)</th><th>rows_deleted</th><th>delete_latency(ms)</th></tr><tr>   <td>zabbix</td><td align="right">items</td><td>8120401</td><td>21437.49</td><td>0</td><td>0.00</td><td>244</td><td>8.42</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">functions</td><td>6819314</td><td>16192.44</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">triggers</td><td>1710786</td><td>3555.35</td><td>0</td><td>0.00</td><td>40</td><td>7.20</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">history</td><td>521540</td><td>293733.58</td><td>74660</td><td>1455.35</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">hosts</td><td>136360</td><td>479.06</td><td>0</td><td>0.00</td><td>670</td><td>37.11</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">item_discovery</td><td>90560</td><td>486.30</td><td>0</td><td>0.00</td><td>20594</td><td>193.35</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">escalations</td><td>2946</td><td>21.53</td><td>0</td><td>0.00</td><td>6</td><td>0.15</td><td>0</td><td>0.00</td></tr>
+<tr>   <td>zabbix</td><td align="right">sessions</td><td>1194</td><td>36.71</td><td>1092</td><td>121.12</td><td>102</td><td>2.57</td><td>0</td><td>0.00</td></tr>
+</table><p /><hr/><p /><p /><h3>Innodb activity(1)</h3><p /><table border="1" width="1320"> <tr><th>Snap Time</th><th>Com_ins</th><th>Com_upd</th><th>Com_del</th><th>Com_sel</th><th>TPS</th><th>Buf_read_req</th><th>Hit%</th><th>Innodb_rows_ins</th><th>Innodb_rows_upd</th><th>Innodb_rows_del</th><th>Innodb_rows_read</th><th>Innodb_log_fsyncs</th><th>Innodb_log_wrn(k/s)</th><th>Threads_running</th></tr><tr><td>2014-12-01 16:59:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>24</td><td>9</td><td>13107</td><td>100</td><td>285</td><td>2</td><td>0</td><td>4096</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">4</td><td align="right">4</td><td>0</td><td>28</td><td>8</td><td>20753</td><td>100</td><td>285</td><td>5</td><td>0</td><td>4778</td><td>6</td><td>41</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">6</td><td align="right">5</td><td>0</td><td>30</td><td>11</td><td>834491</td><td>100</td><td>576</td><td>47</td><td>0</td><td>53384</td><td>7</td><td>84</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>29</td><td>9</td><td>13107</td><td>100</td><td>320</td><td>5</td><td>0</td><td>4369</td><td>7</td><td>48</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">5</td><td align="right">6</td><td>0</td><td>33</td><td>11</td><td>16384</td><td>100</td><td>426</td><td>140</td><td>0</td><td>5051</td><td>8</td><td>77</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>25</td><td>9</td><td>13107</td><td>100</td><td>320</td><td>3</td><td>0</td><td>4232</td><td>6</td><td>48</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>26</td><td>9</td><td>39321</td><td>100</td><td>324</td><td>1</td><td>0</td><td>5597</td><td>7</td><td>49</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">4</td><td align="right">4</td><td>0</td><td>28</td><td>8</td><td>814830</td><td>100</td><td>307</td><td>4</td><td>0</td><td>52155</td><td>6</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>25</td><td>9</td><td>13107</td><td>100</td><td>290</td><td>1</td><td>0</td><td>4232</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>28</td><td>9</td><td>13107</td><td>100</td><td>311</td><td>4</td><td>0</td><td>4232</td><td>6</td><td>45</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>27</td><td>9</td><td>3276</td><td>100</td><td>294</td><td>3</td><td>0</td><td>409</td><td>6</td><td>43</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>28</td><td>9</td><td>40413</td><td>100</td><td>285</td><td>4</td><td>0</td><td>5734</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>28</td><td>10</td><td>812646</td><td>100</td><td>311</td><td>6</td><td>0</td><td>52019</td><td>7</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">4</td><td align="right">4</td><td>0</td><td>32</td><td>8</td><td>14199</td><td>100</td><td>285</td><td>8</td><td>0</td><td>4369</td><td>7</td><td>43</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>29</td><td>9</td><td>13107</td><td>100</td><td>315</td><td>4</td><td>0</td><td>4096</td><td>7</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>29</td><td>9</td><td>13107</td><td>100</td><td>290</td><td>4</td><td>0</td><td>4232</td><td>7</td><td>43</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">5</td><td align="right">4</td><td>0</td><td>27</td><td>9</td><td>41900</td><td>100</td><td>285</td><td>3</td><td>0</td><td>5908</td><td>7</td><td>44</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>26</td><td>8</td><td>811554</td><td>100</td><td>294</td><td>2</td><td>0</td><td>51882</td><td>6</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">5</td><td align="right">5</td><td>0</td><td>32</td><td>10</td><td>13107</td><td>100</td><td>294</td><td>6</td><td>0</td><td>4232</td><td>8</td><td>43</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">5</td><td align="right">5</td><td>0</td><td>30</td><td>10</td><td>13107</td><td>100</td><td>315</td><td>6</td><td>0</td><td>4232</td><td>7</td><td>49</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>24</td><td>9</td><td>13329</td><td>100</td><td>295</td><td>1</td><td>0</td><td>4165</td><td>6</td><td>44</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>26</td><td>9</td><td>29491</td><td>100</td><td>290</td><td>1</td><td>0</td><td>5188</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">5</td><td align="right">4</td><td>0</td><td>29</td><td>9</td><td>811142</td><td>100</td><td>306</td><td>3</td><td>0</td><td>51837</td><td>7</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">4</td><td align="right">5</td><td>0</td><td>34</td><td>9</td><td>13329</td><td>100</td><td>295</td><td>4</td><td>0</td><td>4304</td><td>7</td><td>44</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">5</td><td align="right">6</td><td>0</td><td>46</td><td>11</td><td>13107</td><td>100</td><td>311</td><td>5</td><td>0</td><td>4232</td><td>9</td><td>49</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>40</td><td>9</td><td>13107</td><td>100</td><td>290</td><td>2</td><td>0</td><td>4232</td><td>6</td><td>42</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>36</td><td>9</td><td>21845</td><td>100</td><td>290</td><td>2</td><td>0</td><td>4642</td><td>7</td><td>43</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>39</td><td>10</td><td>832307</td><td>100</td><td>307</td><td>8</td><td>0</td><td>53248</td><td>8</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>27</td><td>10</td><td>13107</td><td>100</td><td>290</td><td>7</td><td>0</td><td>4232</td><td>7</td><td>43</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">4</td><td align="right">3</td><td>0</td><td>25</td><td>7</td><td>13107</td><td>100</td><td>307</td><td>1</td><td>0</td><td>4232</td><td>5</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>26</td><td>9</td><td>13107</td><td>100</td><td>285</td><td>3</td><td>0</td><td>4096</td><td>7</td><td>42</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">4</td><td align="right">4</td><td>0</td><td>26</td><td>8</td><td>25122</td><td>100</td><td>290</td><td>3</td><td>0</td><td>4915</td><td>6</td><td>41</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>27</td><td>9</td><td>829030</td><td>100</td><td>311</td><td>4</td><td>0</td><td>52974</td><td>7</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>27</td><td>8</td><td>12892</td><td>100</td><td>281</td><td>4</td><td>0</td><td>4163</td><td>6</td><td>41</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>26</td><td>10</td><td>13329</td><td>100</td><td>316</td><td>4</td><td>0</td><td>4304</td><td>8</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>27</td><td>8</td><td>12892</td><td>100</td><td>281</td><td>3</td><td>0</td><td>4163</td><td>7</td><td>43</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">5</td><td align="right">4</td><td>0</td><td>26</td><td>9</td><td>41506</td><td>100</td><td>290</td><td>2</td><td>0</td><td>5870</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>30</td><td>8</td><td>811554</td><td>100</td><td>307</td><td>4</td><td>0</td><td>52019</td><td>7</td><td>44</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">4</td><td align="right">4</td><td>0</td><td>24</td><td>8</td><td>13329</td><td>100</td><td>273</td><td>2</td><td>0</td><td>4165</td><td>6</td><td>40</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>25</td><td>9</td><td>13107</td><td>100</td><td>311</td><td>2</td><td>0</td><td>4232</td><td>6</td><td>46</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>26</td><td>9</td><td>13107</td><td>100</td><td>285</td><td>2</td><td>0</td><td>4232</td><td>6</td><td>43</td><td>4.00</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>27</td><td>9</td><td>26214</td><td>100</td><td>290</td><td>3</td><td>0</td><td>4915</td><td>6</td><td>42</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>29</td><td>10</td><td>827938</td><td>100</td><td>307</td><td>5</td><td>0</td><td>52838</td><td>7</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">5</td><td align="right">5</td><td>0</td><td>37</td><td>10</td><td>15291</td><td>100</td><td>290</td><td>8</td><td>0</td><td>5188</td><td>8</td><td>44</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>28</td><td>9</td><td>13107</td><td>100</td><td>311</td><td>2</td><td>0</td><td>4096</td><td>6</td><td>45</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>29</td><td>8</td><td>12892</td><td>100</td><td>281</td><td>2</td><td>0</td><td>4163</td><td>6</td><td>40</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">5</td><td align="right">4</td><td>0</td><td>27</td><td>9</td><td>58982</td><td>100</td><td>290</td><td>1</td><td>0</td><td>7236</td><td>7</td><td>43</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">4</td><td align="right">4</td><td>0</td><td>28</td><td>8</td><td>795170</td><td>100</td><td>307</td><td>2</td><td>0</td><td>50653</td><td>6</td><td>44</td><td>2.00</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">5</td><td align="right">4</td><td>0</td><td>24</td><td>9</td><td>12218</td><td>100</td><td>290</td><td>3</td><td>0</td><td>4026</td><td>7</td><td>43</td><td>2.00</td></tr>
+</table><p /><p /><p /><h3>Innodb activity(2)</h3><p /><table border="1" width="1320"> <tr><th>Snap Time</th><th>Indb_pdata</th><th>Indb_pfree</th><th>Indb_pdirty</th><th>Indb_pflush</th><th>Indb_dreads</th><th>Indb_dwrites</th><th>Indb_dread(k/s)</th><th>Indb_dwritten(k/s)</th><th>his_list</th><th>Inlog_uflush</th><th>Inlog_uckpt</th><th>queries_inside</th><th>queries_queued</th><th>read_views</th></tr><tr><td>2014-12-01 16:59:01</td><td align="right">4085180.00</td><td align="right">8196.00</td><td>14.00</td><td>302</td><td>0</td><td>324</td><td>0</td><td>9693</td><td>2395.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">4085181.00</td><td align="right">8197.00</td><td>17.00</td><td>302</td><td>0</td><td>324</td><td>0</td><td>9830</td><td>2476.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">4085174.00</td><td align="right">8193.00</td><td>20.00</td><td>392</td><td>0</td><td>413</td><td>0</td><td>12561</td><td>2087.00</td><td>0</td><td>3</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">4085173.00</td><td align="right">8194.00</td><td>34.00</td><td>320</td><td>0</td><td>341</td><td>0</td><td>10376</td><td>2203.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">4085173.00</td><td align="right">8195.00</td><td>11.00</td><td>349</td><td>0</td><td>371</td><td>0</td><td>11195</td><td>1929.00</td><td>0</td><td>5</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">4085175.00</td><td align="right">8193.00</td><td>24.00</td><td>320</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>1941.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">4085173.00</td><td align="right">8196.00</td><td>27.00</td><td>324</td><td>0</td><td>349</td><td>0</td><td>10513</td><td>2030.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">4085164.00</td><td align="right">8193.00</td><td>18.00</td><td>320</td><td>0</td><td>337</td><td>0</td><td>10240</td><td>2088.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">4085165.00</td><td align="right">8195.00</td><td>33.00</td><td>307</td><td>0</td><td>332</td><td>0</td><td>9966</td><td>2131.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">4085166.00</td><td align="right">8194.00</td><td>39.00</td><td>320</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>2196.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">4085167.00</td><td align="right">8193.00</td><td>4.00</td><td>311</td><td>0</td><td>332</td><td>0</td><td>9966</td><td>2109.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">4085167.00</td><td align="right">8195.00</td><td>39.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9966</td><td>2102.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">4085164.00</td><td align="right">8185.00</td><td>1029.00</td><td>302</td><td>0</td><td>320</td><td>0</td><td>9557</td><td>2200.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">4085157.00</td><td align="right">8192.00</td><td>0.00</td><td>324</td><td>0</td><td>349</td><td>0</td><td>10513</td><td>2296.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">4085158.00</td><td align="right">8192.00</td><td>647.00</td><td>307</td><td>0</td><td>332</td><td>0</td><td>9966</td><td>2263.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">4085165.00</td><td align="right">8185.00</td><td>1098.00</td><td>307</td><td>0</td><td>324</td><td>0</td><td>9693</td><td>2353.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">4085172.00</td><td align="right">8180.00</td><td>1122.00</td><td>306</td><td>0</td><td>331</td><td>0</td><td>10072</td><td>2280.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">4085148.00</td><td align="right">8193.00</td><td>50.00</td><td>324</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>2326.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">4085148.00</td><td align="right">8193.00</td><td>0.00</td><td>315</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>2455.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">4085148.00</td><td align="right">8193.00</td><td>13.00</td><td>324</td><td>0</td><td>345</td><td>0</td><td>10376</td><td>2484.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">4085149.00</td><td align="right">8192.00</td><td>28.00</td><td>312</td><td>0</td><td>334</td><td>0</td><td>10135</td><td>2483.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">4085149.00</td><td align="right">8193.00</td><td>31.00</td><td>311</td><td>0</td><td>328</td><td>0</td><td>9830</td><td>2568.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">4085135.00</td><td align="right">8193.00</td><td>22.00</td><td>310</td><td>0</td><td>335</td><td>0</td><td>10206</td><td>1955.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">4085135.00</td><td align="right">8193.00</td><td>21.00</td><td>316</td><td>0</td><td>338</td><td>0</td><td>9997</td><td>1951.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">4085136.00</td><td align="right">8191.00</td><td>38.00</td><td>324</td><td>0</td><td>349</td><td>0</td><td>10513</td><td>2077.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">4085135.00</td><td align="right">8192.00</td><td>29.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9966</td><td>2096.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">4085133.00</td><td align="right">8195.00</td><td>0.00</td><td>311</td><td>0</td><td>332</td><td>0</td><td>9830</td><td>2051.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">4085124.00</td><td align="right">8192.00</td><td>7.00</td><td>315</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>1552.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">4085125.00</td><td align="right">8191.00</td><td>33.00</td><td>311</td><td>0</td><td>328</td><td>0</td><td>9966</td><td>1674.00</td><td>0</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">4085123.00</td><td align="right">8193.00</td><td>30.00</td><td>311</td><td>0</td><td>332</td><td>0</td><td>10103</td><td>1738.00</td><td>0</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">4085124.00</td><td align="right">8192.00</td><td>29.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9830</td><td>1827.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">4085121.00</td><td align="right">8196.00</td><td>37.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9830</td><td>1838.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">4085113.00</td><td align="right">8192.00</td><td>39.00</td><td>315</td><td>0</td><td>332</td><td>0</td><td>10103</td><td>1385.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">4085113.00</td><td align="right">8192.00</td><td>873.00</td><td>285</td><td>0</td><td>310</td><td>0</td><td>9266</td><td>1476.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">4085113.00</td><td align="right">8192.00</td><td>859.00</td><td>321</td><td>0</td><td>347</td><td>0</td><td>10413</td><td>1517.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">4085113.00</td><td align="right">8192.00</td><td>0.00</td><td>314</td><td>0</td><td>335</td><td>0</td><td>10072</td><td>1586.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">4085119.00</td><td align="right">8187.00</td><td>974.00</td><td>290</td><td>0</td><td>307</td><td>0</td><td>9284</td><td>1582.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">4085099.00</td><td align="right">8194.00</td><td>7.00</td><td>328</td><td>0</td><td>354</td><td>0</td><td>10649</td><td>1586.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">4085101.00</td><td align="right">8192.00</td><td>22.00</td><td>295</td><td>0</td><td>312</td><td>0</td><td>9441</td><td>1611.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">4085100.00</td><td align="right">8195.00</td><td>24.00</td><td>315</td><td>0</td><td>337</td><td>0</td><td>10103</td><td>1662.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">4085102.00</td><td align="right">8195.00</td><td>36.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9830</td><td>1725.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">4085106.00</td><td align="right">8200.00</td><td>28.00</td><td>307</td><td>0</td><td>324</td><td>0</td><td>9830</td><td>1821.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">4085107.00</td><td align="right">8193.00</td><td>0.00</td><td>311</td><td>0</td><td>337</td><td>0</td><td>10103</td><td>1594.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">4085105.00</td><td align="right">8194.00</td><td>30.00</td><td>311</td><td>0</td><td>332</td><td>0</td><td>9966</td><td>1665.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">4085106.00</td><td align="right">8193.00</td><td>31.00</td><td>320</td><td>0</td><td>341</td><td>0</td><td>10240</td><td>1751.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">4085105.00</td><td align="right">8194.00</td><td>35.00</td><td>297</td><td>0</td><td>318</td><td>0</td><td>9669</td><td>1850.00</td><td>0</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">4085105.00</td><td align="right">8196.00</td><td>7.00</td><td>307</td><td>0</td><td>328</td><td>0</td><td>9830</td><td>1934.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>1.00</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">4085094.00</td><td align="right">8194.00</td><td>0.00</td><td>311</td><td>0</td><td>332</td><td>0</td><td>9966</td><td>1970.00</td><td>0</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">4085094.00</td><td align="right">8194.00</td><td>11.00</td><td>312</td><td>0</td><td>334</td><td>0</td><td>9997</td><td>2050.00</td><td>0</td><td>0</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+</table><p /><hr/><p /><p /><h3>MySql peak point Info(you can use myawrsrpt to generate a snap report)</h3><p /><table border="1"  > <tr><th>Snap ID</th><th>Snap Time</th><th>user</th><th>system</th><th>idle</th><th>iowait</th> <th>load1</th><th>load5</th>  <th>Threads_connected</th><th>Threads_running</th><th>lock_waits</th> </tr></table><p /><hr/><p />
+<p /><h3>OS Load Info</h3><p /><table border="1" width="600" > <tr><th>Snap Time</th><th>load1</th><th>load5</th><th>load15</th></tr><tr><td>2014-12-01 16:58:01</td><td align="right">1.34</td><td align="right">1.93</td><td>1.98</td></tr>
+<tr><td>2014-12-01 16:59:01</td><td align="right">1.75</td><td align="right">1.92</td><td>1.97</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">1.90</td><td align="right">1.94</td><td>1.97</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">1.91</td><td align="right">1.94</td><td>1.97</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">1.85</td><td align="right">1.93</td><td>1.96</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">1.10</td><td align="right">1.71</td><td>1.88</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">1.51</td><td align="right">1.70</td><td>1.87</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">1.71</td><td align="right">1.72</td><td>1.86</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">2.32</td><td align="right">1.93</td><td>1.92</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">1.92</td><td align="right">1.89</td><td>1.91</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">1.70</td><td align="right">1.86</td><td>1.89</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">1.84</td><td align="right">1.85</td><td>1.89</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">2.20</td><td align="right">1.95</td><td>1.92</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">2.99</td><td align="right">2.22</td><td>2.01</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">2.91</td><td align="right">2.33</td><td>2.06</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">2.64</td><td align="right">2.38</td><td>2.09</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">2.81</td><td align="right">2.47</td><td>2.14</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">2.65</td><td align="right">2.50</td><td>2.17</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">2.73</td><td align="right">2.56</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">1.99</td><td align="right">2.40</td><td>2.18</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">2.22</td><td align="right">2.39</td><td>2.18</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">2.26</td><td align="right">2.38</td><td>2.19</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">1.78</td><td align="right">2.22</td><td>2.15</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">1.91</td><td align="right">2.20</td><td>2.15</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">1.50</td><td align="right">2.04</td><td>2.09</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">1.39</td><td align="right">1.92</td><td>2.05</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">1.93</td><td align="right">1.99</td><td>2.06</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">2.07</td><td align="right">1.99</td><td>2.06</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">2.34</td><td align="right">2.08</td><td>2.08</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">2.45</td><td align="right">2.18</td><td>2.12</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">2.25</td><td align="right">2.16</td><td>2.11</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">2.61</td><td align="right">2.26</td><td>2.14</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">2.06</td><td align="right">2.20</td><td>2.13</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">2.60</td><td align="right">2.35</td><td>2.19</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">2.58</td><td align="right">2.40</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">2.23</td><td align="right">2.32</td><td>2.19</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">1.54</td><td align="right">2.10</td><td>2.12</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">2.07</td><td align="right">2.13</td><td>2.13</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">2.16</td><td align="right">2.16</td><td>2.14</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">2.51</td><td align="right">2.24</td><td>2.16</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">1.93</td><td align="right">2.14</td><td>2.13</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">2.62</td><td align="right">2.26</td><td>2.17</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">2.80</td><td align="right">2.37</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">2.53</td><td align="right">2.36</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">2.28</td><td align="right">2.32</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">2.27</td><td align="right">2.32</td><td>2.21</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">2.12</td><td align="right">2.27</td><td>2.20</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">1.58</td><td align="right">2.08</td><td>2.14</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">1.75</td><td align="right">2.05</td><td>2.12</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">1.95</td><td align="right">2.04</td><td>2.11</td></tr>
+</table><p /><p /><h3>OS CPU Info</h3><p /><table border="1" width="600" > <tr><th>Snap Time</th><th>user</th><th>system</th><th>idle</th><th>iowait</th></tr><tr><td>2014-12-01 16:58:01</td><td align="right">6.00</td><td align="right">3.00</td><td>91.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 16:59:01</td><td align="right">5.00</td><td align="right">5.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">13.00</td><td align="right">5.00</td><td>82.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">6.00</td><td align="right">6.00</td><td>88.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">5.00</td><td align="right">5.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">6.00</td><td align="right">3.00</td><td>91.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">10.00</td><td align="right">5.00</td><td>85.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">6.00</td><td align="right">3.00</td><td>91.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">8.00</td><td align="right">5.00</td><td>86.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">11.00</td><td align="right">6.00</td><td>80.00</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">8.00</td><td align="right">5.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">6.00</td><td align="right">6.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">14.00</td><td align="right">12.00</td><td>74.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">7.00</td><td align="right">7.00</td><td>86.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">6.00</td><td align="right">3.00</td><td>91.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">10.00</td><td align="right">5.00</td><td>85.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">11.00</td><td align="right">5.00</td><td>84.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">10.00</td><td align="right">3.00</td><td>85.00</td><td>3.00</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">13.00</td><td align="right">5.00</td><td>82.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">9.00</td><td align="right">3.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">5.00</td><td align="right">5.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">8.00</td><td align="right">5.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">14.00</td><td align="right">5.00</td><td>81.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">11.00</td><td align="right">8.00</td><td>81.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">6.00</td><td align="right">3.00</td><td>92.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">6.00</td><td align="right">6.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">5.00</td><td align="right">5.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">8.00</td><td align="right">3.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">8.00</td><td align="right">3.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">12.00</td><td align="right">5.00</td><td>83.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">14.00</td><td align="right">8.00</td><td>78.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">8.00</td><td align="right">5.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">17.00</td><td align="right">6.00</td><td>78.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">10.00</td><td align="right">3.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">9.00</td><td align="right">3.00</td><td>88.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">11.00</td><td align="right">6.00</td><td>83.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">13.00</td><td align="right">5.00</td><td>82.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">9.00</td><td align="right">3.00</td><td>88.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">6.00</td><td align="right">3.00</td><td>92.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">8.00</td><td align="right">5.00</td><td>88.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">9.00</td><td align="right">3.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">6.00</td><td align="right">6.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">15.00</td><td align="right">3.00</td><td>82.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">5.00</td><td align="right">3.00</td><td>92.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">11.00</td><td align="right">5.00</td><td>84.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">5.00</td><td align="right">5.00</td><td>89.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">8.00</td><td align="right">5.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">12.00</td><td align="right">3.00</td><td>85.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">8.00</td><td align="right">5.00</td><td>87.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">12.00</td><td align="right">3.00</td><td>85.00</td><td>0.00</td></tr>
+</table><p />
+<p /><h3>OS IO Info</h3><p /><table border="1" width="600" > <tr><th>Snap Time</th><th>rd_ios_s</th><th>wr_ios_s</th><th>rkbs</th><th>wkbs</th><th>queue</th><th>svc_t</th><th>busy</th></tr><tr><td>2014-12-01 16:58:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 16:59:01</td><td align="right">0.00</td><td align="right">1073.68</td><td>0.00</td><td>4294.74</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">0.00</td><td align="right">1578.95</td><td>0.00</td><td>6315.79</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">0.00</td><td align="right">583.78</td><td>0.00</td><td>3113.51</td><td>0.06</td><td>0.11</td><td>6.49</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">0.00</td><td align="right">1165.71</td><td>0.00</td><td>4662.86</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">0.00</td><td align="right">984.62</td><td>0.00</td><td>3938.46</td><td>0.12</td><td>0.12</td><td>12.31</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">0.00</td><td align="right">1556.76</td><td>0.00</td><td>6227.03</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">754.29</td><td align="right">2331.43</td><td>12068.57</td><td>10148.57</td><td>0.34</td><td>0.09</td><td>27.43</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">0.00</td><td align="right">505.26</td><td>0.00</td><td>2778.95</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">0.00</td><td align="right">4466.67</td><td>0.00</td><td>34666.67</td><td>0.67</td><td>0.09</td><td>40.00</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">0.00</td><td align="right">2400.00</td><td>0.00</td><td>10593.10</td><td>0.08</td><td>0.03</td><td>8.28</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">0.00</td><td align="right">548.57</td><td>0.00</td><td>2194.29</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">0.00</td><td align="right">1440.00</td><td>0.00</td><td>5760.00</td><td>0.12</td><td>0.04</td><td>6.00</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">0.00</td><td align="right">1894.74</td><td>0.00</td><td>8589.47</td><td>0.19</td><td>0.07</td><td>12.63</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">184.62</td><td align="right">492.31</td><td>2953.85</td><td>1969.23</td><td>1.11</td><td>1.45</td><td>98.46</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">0.00</td><td align="right">1389.47</td><td>0.00</td><td>13389.47</td><td>0.13</td><td>0.05</td><td>6.32</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">0.00</td><td align="right">2331.43</td><td>0.00</td><td>10148.57</td><td>0.07</td><td>0.03</td><td>6.86</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">0.00</td><td align="right">1578.95</td><td>0.00</td><td>7073.68</td><td>0.13</td><td>0.04</td><td>6.32</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">0.00</td><td align="right">1600.00</td><td>0.00</td><td>7138.46</td><td>0.12</td><td>0.04</td><td>6.15</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">0.00</td><td align="right">2400.00</td><td>0.00</td><td>10897.30</td><td>0.39</td><td>0.11</td><td>25.95</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">0.00</td><td align="right">2000.00</td><td>0.00</td><td>8000.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">0.00</td><td align="right">3400.00</td><td>0.00</td><td>23733.33</td><td>0.07</td><td>0.02</td><td>6.67</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">0.00</td><td align="right">822.86</td><td>0.00</td><td>3291.43</td><td>0.14</td><td>0.17</td><td>13.71</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">0.00</td><td align="right">1037.84</td><td>0.00</td><td>4151.35</td><td>0.06</td><td>0.06</td><td>6.49</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">0.00</td><td align="right">1894.74</td><td>0.00</td><td>8589.47</td><td>0.06</td><td>0.03</td><td>6.32</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">0.00</td><td align="right">3657.14</td><td>0.00</td><td>15542.86</td><td>0.40</td><td>0.06</td><td>22.86</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">0.00</td><td align="right">3243.24</td><td>0.00</td><td>14270.27</td><td>0.19</td><td>0.06</td><td>19.46</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">0.00</td><td align="right">7800.00</td><td>0.00</td><td>162666.67</td><td>0.67</td><td>0.03</td><td>20.00</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">0.00</td><td align="right">553.85</td><td>0.00</td><td>3200.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">0.00</td><td align="right">600.00</td><td>0.00</td><td>4500.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">0.00</td><td align="right">2778.95</td><td>0.00</td><td>12126.32</td><td>0.32</td><td>0.09</td><td>25.26</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">0.00</td><td align="right">1020.00</td><td>0.00</td><td>5040.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">0.00</td><td align="right">2194.29</td><td>0.00</td><td>9600.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">0.00</td><td align="right">1600.00</td><td>0.00</td><td>6666.67</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">0.00</td><td align="right">518.92</td><td>0.00</td><td>2335.14</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">0.00</td><td align="right">1515.79</td><td>0.00</td><td>6063.16</td><td>0.19</td><td>0.08</td><td>12.63</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">0.00</td><td align="right">518.92</td><td>0.00</td><td>2075.68</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">0.00</td><td align="right">1831.58</td><td>0.00</td><td>8084.21</td><td>0.13</td><td>0.03</td><td>6.32</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">0.00</td><td align="right">2964.71</td><td>0.00</td><td>12705.88</td><td>0.14</td><td>0.02</td><td>7.06</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">0.00</td><td align="right">821.05</td><td>0.00</td><td>3284.21</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+</table><p /><p /><h3>OS Other Info</h3><p /><table border="1" width="900" > <tr><th>Snap Time</th><th>swap_in</th><th>swap_out</th><th>net_recv</th><th>net_send</th><th>file_system</th><th>total_mb</th><th>used_mb</th><th>used_pct</th><th>mount_point</th></tr><tr><td>2014-12-01 16:58:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943152.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 16:59:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943159.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:00:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943165.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:01:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943182.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:02:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943190.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:03:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943198.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:04:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943214.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:05:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943232.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:06:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943245.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:07:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943253.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:08:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943268.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:09:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943287.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:10:01</td><td align="right">0.00</td><td align="right">41.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943291.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:11:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943306.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:12:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943314.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:13:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943324.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:14:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943331.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:15:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943351.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:16:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943370.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:17:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943387.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:18:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943396.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:19:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943414.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:20:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943427.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:21:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943439.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:22:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943446.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:23:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943461.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:24:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943465.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:25:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943475.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:26:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943483.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:27:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943494.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:28:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943512.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:29:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943537.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:30:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943541.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:31:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943568.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:32:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943579.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:33:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943587.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:34:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943593.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:35:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943596.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:36:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943611.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:37:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943618.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:38:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943622.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:39:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943643.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:40:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943660.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:41:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943669.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:42:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943680.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:43:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943697.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:44:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943709.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:45:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943718.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:46:02</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943733.00</td><td>36.00</td><td>/storage/sas</td></tr>
+<tr><td>2014-12-01 17:47:01</td><td align="right">0.00</td><td align="right">0.00</td><td>0.00</td><td>0.00</td><td>/dev/sdb</td><td>2814021.00</td><td>943740.00</td><td>36.00</td><td>/storage/sas</td></tr>
+</table><p /><hr/><p /><h3>TOP SLOW SQL</h3><p /><table border="1" width="100%" > <tr><th>checksum</th><th>db name</th><th>ts_min</th><th>ts_max</th><th>ts_cnt</th><th>Query_time_sum</th><th>Query_time_pct_95</th><th>Lock_time_sum</th><th>Lock_time_pct_95</th><th>Rows_sent_sum</th><th>Rows_sent_pct_95</th><th>sample</th></tr><tr><td><a href="#2421751182617816582">2421751182617816582</a></td><td align="right">zabbix</td><td align="right">2014-12-01 16:30:31</td><td>2014-12-01 17:25:30</td><td>12</td><td>353.774</td><td>28.7497</td><td>0.074655</td><td>0.0075447</td><td>0</td><td>0</td><td>insert into tmp_his ... </td></tr>
+</table><p /><p /><p /><p /><h3>TOP SQL DETAIL</h3><p /><table border="1" width="100%" > <tr><th>checksum</th><th>sql detail</th></tr><tr><td><a  name="2421751182617816582"></a>2421751182617816582</td><td>insert into tmp_his select h.hostid,i.itemid,hi.value,hi.clock,i.name,h.name from hosts h, items i,(select a.itemid,a.value,a.clock from history a, (select max(clock) clock,itemid from history group by itemid) b where a.itemid=b.itemid and a.clock=b.clock) hi where h.hostid=i.hostid and i.itemid=hi.itemid and i.key_ in ('system.cpu.load[percpu,avg1]','iostat[iops]','system.cpu.util[,idle]','vm.memory.usage')<td></tr>
+</table><p /><p /><p /><p /><h2>--------The      End -----------</h2></body></html>
