@@ -18,6 +18,13 @@ myawr_v3 now support mysql 5.6 GA and will continue support mysql feature versio
 
 before install myawr_v3 you need run sys_schema to create formatted views for data collecting.
 
+####2024 Update
+
+- Added resilient connection caching for the collectors and reporters to avoid repeatedly opening handles for every query.
+- Introduced lock files that prevent concurrent executions of the same script (configurable via `MYAWR_LOCK_DIR`).
+- Enabled UTF-8 aware DBI handles with cleaner error reporting by using `Carp` and `warnings`.
+- Simplified the Perl sources by removing repeated inline `use DBI` statements and consolidating connection logic.
+
 -----------------------------------------------------------------------------------------------------
 
 ####2014/08: myawrv2
